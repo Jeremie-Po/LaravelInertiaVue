@@ -6,14 +6,15 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/', function () {
-    return Inertia::render('Home', [
-        'name' => 'Jérémie',
-        'frameworks' => [
-            'symfony',
-            'Laravel',
-            'next',
-        ]
-    ]);
+    return Inertia::render('Home');
+});
+
+Route::get('/settings', function () {
+    return Inertia::render('Settings');
+});
+
+Route::get('/users', function () {
+    return Inertia::render('Users');
 });
 
 Route::get('/dashboard', function () {
