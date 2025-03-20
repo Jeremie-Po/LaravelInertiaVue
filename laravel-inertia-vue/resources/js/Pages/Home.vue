@@ -1,6 +1,6 @@
 <template>
     <div class="prose">
-        <h1>Welcome Home</h1>
+        <h1 class="text-4xl font-bold">Welcome Home</h1>
         <Nav/>
     </div>
 </template>
