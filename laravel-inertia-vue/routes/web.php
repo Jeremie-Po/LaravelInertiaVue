@@ -10,6 +10,9 @@ Route::get('/', function () {
 });
 
 Route::get('/settings', function () {
+//    create a delay to see the progress bar
+    sleep(2);
+    
     return Inertia::render('Settings');
 });
 
