@@ -2,13 +2,13 @@
     <nav class="mt-6">
         <ul class="list-disc">
             <li>
-                <Link href="/">Home</Link>
+                <inertia-nav-link href="/" :active="$page.component === 'Home'">HomeLink</inertia-nav-link>
             </li>
             <li>
-                <Link href="/settings">Settings</Link>
+                <inertia-nav-link href="/settings" :active="$page.component === 'Settings'">Settings</inertia-nav-link>
             </li>
             <li>
-                <Link href="/users">Users</Link>
+                <inertia-nav-link href="/users" :active="$page.component === 'Users'">Users</inertia-nav-link>
             </li>
             <li>
                 <button @click="handleLogout" class="text-blue-500 hover:underline"
@@ -19,8 +19,8 @@
     </nav>
 </template>
 <script setup lang="ts">
-import {Link} from "@inertiajs/vue3";
 import {Inertia} from '@inertiajs/inertia';
+import InertiaNavLink from "@/Components/inertiaNavLink.vue";
 
 const handleLogout = () => {
     Inertia.post('/logout');
