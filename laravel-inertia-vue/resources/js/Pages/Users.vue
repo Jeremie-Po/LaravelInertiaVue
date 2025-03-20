@@ -1,6 +1,6 @@
 <template>
-    <div class="prose">
-        <h1>Welcome Users</h1>
+    <div>
+        <h1 class="text-4xl font-bold">Welcome Users</h1>
         <Nav/>
     </div>
 </template>
