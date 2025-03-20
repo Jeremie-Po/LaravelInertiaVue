@@ -12,12 +12,16 @@ Route::get('/', function () {
 Route::get('/settings', function () {
 //    create a delay to see the progress bar
     sleep(2);
-    
+
     return Inertia::render('Settings');
 });
 
 Route::get('/users', function () {
     return Inertia::render('Users');
+});
+
+Route::post('/logout', function () {
+    dd('log the user out');
 });
 
 Route::get('/dashboard', function () {
